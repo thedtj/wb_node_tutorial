@@ -1,0 +1,12 @@
+extends layout
+
+include ./mixins/_storeCard.pug
+include ./mixins/_pagination
+
+block content
+	.inner
+		h2 These are the #{title}, dummy.
+		.stores
+			each store in stores
+				+storeCard(store)
+		+pagination(page, pages, count)
